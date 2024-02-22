@@ -1,0 +1,19 @@
+---
+
+- name: Hello! I am a C&V
+  ansible.builtin.debug:
+    msg: I am special! I am the Master of the WAAS Universe!
+  tags:
+    - om
+
+- name: Fun Group Fact
+  ansible.builtin.debug:
+    msg: "{{ cv_fun_group_fact }}"
+  tags:
+    - om
+
+- name: Tell Me About Yourself
+  ansible.builtin.debug:
+    msg: "{{ tell_me_about_yourself }}"
+  tags:
+    - om

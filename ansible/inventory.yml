@@ -1,0 +1,380 @@
+---
+all:
+  children:
+    production:
+      hosts:
+        gpt.gus.ap1.nas.waas:
+        sp1.gus.ap1.nas.waas:
+        sp2.gus.ap1.nas.waas:
+        a.wre.bet.nas.waas:
+        b.wre.bet.nas.waas:
+        c.wre.bet.nas.waas:
+        a.wre.bil.nas.waas:
+        b.wre.bil.nas.waas:
+        c.wre.bil.nas.waas:
+        gpt.gus.br1.nas.waas:
+        sp1.gus.br1.nas.waas:
+        sp2.gus.br1.nas.waas:
+        gpt.gus.br2.nas.waas:
+        sp1.gus.br2.nas.waas:
+        sp2.gus.br2.nas.waas:
+        a.wre.brw.nas.waas:
+        b.wre.brw.nas.waas:
+        c.wre.brw.nas.waas:
+        a.wre.cdb.nas.waas:
+        b.wre.cdb.nas.waas:
+        c.wre.cdb.nas.waas:
+        gpt.gus.cm1.nas.waas:
+        sp1.gus.cm1.nas.waas:
+        sp2.gus.cm1.nas.waas:
+        gpt.gus.dx1.nas.waas:
+        sp1.gus.dx1.nas.waas:
+        sp2.gus.dx1.nas.waas:
+        a.wre.fai.nas.waas:
+        b.wre.fai.nas.waas:
+        c.wre.fai.nas.waas:
+        a.wre.hnl.nas.waas:
+        b.wre.hnl.nas.waas:
+        c.wre.hnl.nas.waas:
+        a.wre.jnu.nas.waas:
+        b.wre.jnu.nas.waas:
+        c.wre.jnu.nas.waas:
+        a.wre.mmd.nas.waas:
+        b.wre.mmd.nas.waas:
+        c.wre.mmd.nas.waas:
+        a.wre.mmx.nas.waas:
+        b.wre.mmx.nas.waas:
+        c.wre.mmx.nas.waas:
+        a.wre.mpr.nas.waas:
+        b.wre.mpr.nas.waas:
+        c.wre.mpr.nas.waas:
+        a.wre.msd.nas.waas:
+        b.wre.msd.nas.waas:
+        c.wre.msd.nas.waas:
+        a.wre.mtp.nas.waas:
+        b.wre.mtp.nas.waas:
+        c.wre.mtp.nas.waas:
+        om.noc.nas.waas:
+        a.wre.otz.nas.waas:
+        b.wre.otz.nas.waas:
+        c.wre.otz.nas.waas:
+        om.poc.nas.waas:
+        gpt.gus.sz1.nas.waas:
+        sp1.gus.sz1.nas.waas:
+        sp2.gus.sz1.nas.waas:
+        a.wre.yfb.nas.waas:
+        b.wre.yfb.nas.waas:
+        c.wre.yfb.nas.waas:
+        a.wre.yqx.nas.waas:
+        b.wre.yqx.nas.waas:
+        c.wre.yqx.nas.waas:
+        a.wre.ywg.nas.waas:
+        b.wre.ywg.nas.waas:
+        c.wre.ywg.nas.waas:
+        a.wre.yyr.nas.waas:
+        b.wre.yyr.nas.waas:
+        c.wre.yyr.nas.waas:
+        a.wre.zab.nas.waas:
+        b.wre.zab.nas.waas:
+        c.wre.zab.nas.waas:
+        a.wre.zan.nas.waas:
+        b.wre.zan.nas.waas:
+        c.wre.zan.nas.waas:
+        a.wre.zau.nas.waas:
+        b.wre.zau.nas.waas:
+        c.wre.zau.nas.waas:
+        a.wre.zbw.nas.waas:
+        b.wre.zbw.nas.waas:
+        c.wre.zbw.nas.waas:
+        a.wre.zdc.nas.waas:
+        b.wre.zdc.nas.waas:
+        c.wre.zdc.nas.waas:
+        cp1.cv.zdc.nas.waas:
+        cp2.cv.zdc.nas.waas:
+        sp1.cv.zdc.nas.waas:
+        sp2.cv.zdc.nas.waas:
+        a.wre.zdv.nas.waas:
+        b.wre.zdv.nas.waas:
+        c.wre.zdv.nas.waas:
+        a.wre.zfw.nas.waas:
+        b.wre.zfw.nas.waas:
+        c.wre.zfw.nas.waas:
+        a.wre.zhu.nas.waas:
+        b.wre.zhu.nas.waas:
+        c.wre.zhu.nas.waas:
+        a.wre.zjx.nas.waas:
+        b.wre.zjx.nas.waas:
+        c.wre.zjx.nas.waas:
+        a.wre.zkc.nas.waas:
+        b.wre.zkc.nas.waas:
+        c.wre.zkc.nas.waas:
+        a.wre.zla.nas.waas:
+        b.wre.zla.nas.waas:
+        c.wre.zla.nas.waas:
+        cp1.cv.zla.nas.waas:
+        cp2.cv.zla.nas.waas:
+        sp1.cv.zla.nas.waas:
+        sp2.cv.zla.nas.waas:
+        a.wre.zlc.nas.waas:
+        b.wre.zlc.nas.waas:
+        c.wre.zlc.nas.waas:
+        a.wre.zma.nas.waas:
+        b.wre.zma.nas.waas:
+        c.wre.zma.nas.waas:
+        a.wre.zme.nas.waas:
+        b.wre.zme.nas.waas:
+        c.wre.zme.nas.waas:
+        a.wre.zmp.nas.waas:
+        b.wre.zmp.nas.waas:
+        c.wre.zmp.nas.waas:
+        a.wre.zny.nas.waas:
+        b.wre.zny.nas.waas:
+        c.wre.zny.nas.waas:
+        a.wre.zoa.nas.waas:
+        b.wre.zoa.nas.waas:
+        c.wre.zoa.nas.waas:
+        a.wre.zob.nas.waas:
+        b.wre.zob.nas.waas:
+        c.wre.zob.nas.waas:
+        a.wre.zse.nas.waas:
+        b.wre.zse.nas.waas:
+        c.wre.zse.nas.waas:
+        a.wre.zsu.nas.waas:
+        b.wre.zsu.nas.waas:
+        c.wre.zsu.nas.waas:
+        a.wre.ztl.nas.waas:
+        b.wre.ztl.nas.waas:
+        c.wre.ztl.nas.waas:
+        cp1.cv.ztl.nas.waas:
+        cp2.cv.ztl.nas.waas:
+        sp1.cv.ztl.nas.waas:
+        sp2.cv.ztl.nas.waas:
+    wrs:
+      hosts:
+        a.wre.bet.nas.waas:
+        b.wre.bet.nas.waas:
+        c.wre.bet.nas.waas:
+        a.wre.bil.nas.waas:
+        b.wre.bil.nas.waas:
+        c.wre.bil.nas.waas:
+    wre_a:
+      hosts:
+        a.wre.bet.nas.waas:
+        a.wre.bil.nas.waas:
+    wre_b:
+      hosts:
+        b.wre.bet.nas.waas:
+        b.wre.bil.nas.waas:
+    wre_c:
+      hosts:
+        c.wre.bet.nas.waas:
+        c.wre.bil.nas.waas:
+    gus:
+      hosts:
+        gpt.gus.ap1.nas.waas:
+        sp1.gus.ap1.nas.waas:
+        sp2.gus.ap1.nas.waas:
+    sm9_131:
+      hosts:
+    s15_133:
+      hosts:
+    g30_135:
+      hosts:
+        gpt.gus.ap1.nas.waas:
+        sp1.gus.ap1.nas.waas:
+        sp2.gus.ap1.nas.waas:
+    om:
+      hosts:
+        om.noc.nas.waas:
+        om.poc.nas.waas:
+# gpt.gus.ap1.nas.waas:
+# sp1.gus.ap1.nas.waas:
+# sp2.gus.ap1.nas.waas:
+# 
+# a.wre.bet.nas.waas:
+# b.wre.bet.nas.waas:
+# c.wre.bet.nas.waas:
+# 
+# a.wre.bil.nas.waas:
+# b.wre.bil.nas.waas:
+# c.wre.bil.nas.waas:
+# 
+# gpt.gus.br1.nas.waas:
+# sp1.gus.br1.nas.waas:
+# sp2.gus.br1.nas.waas:
+# 
+# gpt.gus.br2.nas.waas:
+# sp1.gus.br2.nas.waas:
+# sp2.gus.br2.nas.waas:
+# 
+# a.wre.brw.nas.waas:
+# b.wre.brw.nas.waas:
+# c.wre.brw.nas.waas:
+# 
+# a.wre.cdb.nas.waas:
+# b.wre.cdb.nas.waas:
+# c.wre.cdb.nas.waas:
+# 
+# gpt.gus.cm1.nas.waas:
+# sp1.gus.cm1.nas.waas:
+# sp2.gus.cm1.nas.waas:
+# 
+# gpt.gus.dx1.nas.waas:
+# sp1.gus.dx1.nas.waas:
+# sp2.gus.dx1.nas.waas:
+# 
+# a.wre.fai.nas.waas:
+# b.wre.fai.nas.waas:
+# c.wre.fai.nas.waas:
+# 
+# a.wre.hnl.nas.waas:
+# b.wre.hnl.nas.waas:
+# c.wre.hnl.nas.waas:
+# 
+# a.wre.jnu.nas.waas:
+# b.wre.jnu.nas.waas:
+# c.wre.jnu.nas.waas:
+# 
+# a.wre.mmd.nas.waas:
+# b.wre.mmd.nas.waas:
+# c.wre.mmd.nas.waas:
+# 
+# a.wre.mmx.nas.waas:
+# b.wre.mmx.nas.waas:
+# c.wre.mmx.nas.waas:
+# 
+# a.wre.mpr.nas.waas:
+# b.wre.mpr.nas.waas:
+# c.wre.mpr.nas.waas:
+# 
+# a.wre.msd.nas.waas:
+# b.wre.msd.nas.waas:
+# c.wre.msd.nas.waas:
+# 
+# a.wre.mtp.nas.waas:
+# b.wre.mtp.nas.waas:
+# c.wre.mtp.nas.waas:
+# 
+# om.noc.nas.waas:
+# 
+# a.wre.otz.nas.waas:
+# b.wre.otz.nas.waas:
+# c.wre.otz.nas.waas:
+# 
+# om.poc.nas.waas:
+# 
+# gpt.gus.sz1.nas.waas:
+# sp1.gus.sz1.nas.waas:
+# sp2.gus.sz1.nas.waas:
+# 
+# a.wre.yfb.nas.waas:
+# b.wre.yfb.nas.waas:
+# c.wre.yfb.nas.waas:
+# 
+# a.wre.yqx.nas.waas:
+# b.wre.yqx.nas.waas:
+# c.wre.yqx.nas.waas:
+# 
+# a.wre.ywg.nas.waas:
+# b.wre.ywg.nas.waas:
+# c.wre.ywg.nas.waas:
+# 
+# a.wre.yyr.nas.waas:
+# b.wre.yyr.nas.waas:
+# c.wre.yyr.nas.waas:
+# 
+# a.wre.zab.nas.waas:
+# b.wre.zab.nas.waas:
+# c.wre.zab.nas.waas:
+# 
+# a.wre.zan.nas.waas:
+# b.wre.zan.nas.waas:
+# c.wre.zan.nas.waas:
+# 
+# a.wre.zau.nas.waas:
+# b.wre.zau.nas.waas:
+# c.wre.zau.nas.waas:
+# 
+# a.wre.zbw.nas.waas:
+# b.wre.zbw.nas.waas:
+# c.wre.zbw.nas.waas:
+# 
+# a.wre.zdc.nas.waas:
+# b.wre.zdc.nas.waas:
+# c.wre.zdc.nas.waas:
+# cp1.cv.zdc.nas.waas:
+# cp2.cv.zdc.nas.waas:
+# sp1.cv.zdc.nas.waas:
+# sp2.cv.zdc.nas.waas:
+# 
+# a.wre.zdv.nas.waas:
+# b.wre.zdv.nas.waas:
+# c.wre.zdv.nas.waas:
+# 
+# a.wre.zfw.nas.waas:
+# b.wre.zfw.nas.waas:
+# c.wre.zfw.nas.waas:
+# 
+# a.wre.zhu.nas.waas:
+# b.wre.zhu.nas.waas:
+# c.wre.zhu.nas.waas:
+# 
+# a.wre.zjx.nas.waas:
+# b.wre.zjx.nas.waas:
+# c.wre.zjx.nas.waas:
+# 
+# a.wre.zkc.nas.waas:
+# b.wre.zkc.nas.waas:
+# c.wre.zkc.nas.waas:
+# 
+# a.wre.zla.nas.waas:
+# b.wre.zla.nas.waas:
+# c.wre.zla.nas.waas:
+# cp1.cv.zla.nas.waas:
+# cp2.cv.zla.nas.waas:
+# sp1.cv.zla.nas.waas:
+# sp2.cv.zla.nas.waas:
+# 
+# a.wre.zlc.nas.waas:
+# b.wre.zlc.nas.waas:
+# c.wre.zlc.nas.waas:
+# 
+# a.wre.zma.nas.waas:
+# b.wre.zma.nas.waas:
+# c.wre.zma.nas.waas:
+# 
+# a.wre.zme.nas.waas:
+# b.wre.zme.nas.waas:
+# c.wre.zme.nas.waas:
+# 
+# a.wre.zmp.nas.waas:
+# b.wre.zmp.nas.waas:
+# c.wre.zmp.nas.waas:
+# 
+# a.wre.zny.nas.waas:
+# b.wre.zny.nas.waas:
+# c.wre.zny.nas.waas:
+# 
+# a.wre.zoa.nas.waas:
+# b.wre.zoa.nas.waas:
+# c.wre.zoa.nas.waas:
+# 
+# a.wre.zob.nas.waas:
+# b.wre.zob.nas.waas:
+# c.wre.zob.nas.waas:
+# 
+# a.wre.zse.nas.waas:
+# b.wre.zse.nas.waas:
+# c.wre.zse.nas.waas:
+# 
+# a.wre.zsu.nas.waas:
+# b.wre.zsu.nas.waas:
+# c.wre.zsu.nas.waas:
+# 
+# a.wre.ztl.nas.waas:
+# b.wre.ztl.nas.waas:
+# c.wre.ztl.nas.waas:
+# cp1.cv.ztl.nas.waas:
+# cp2.cv.ztl.nas.waas:
+# sp1.cv.ztl.nas.waas:
+# sp2.cv.ztl.nas.waas:

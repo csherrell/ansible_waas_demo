@@ -1,0 +1,19 @@
+---
+
+- name: Hello! I am an O&M
+  ansible.builtin.debug:
+    msg: I am special! I have a 3 screen GUI Display!
+  tags:
+    - om
+
+- name: Fun Group Fact
+  ansible.builtin.debug:
+    msg: "{{ om_fun_group_fact }}"
+  tags:
+    - om
+
+- name: Tell Me About Yourself
+  ansible.builtin.debug:
+    msg: "{{ tell_me_about_yourself }}"
+  tags:
+    - om

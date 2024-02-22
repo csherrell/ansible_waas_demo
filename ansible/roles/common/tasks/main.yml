@@ -1,0 +1,7 @@
+---
+
+- name: Hello! I am the Common Playbook.
+  ansible.builtin.debug:
+    msg: I am everywhere you want to be!
+  tags:
+    - common

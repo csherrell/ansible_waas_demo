@@ -1,0 +1,19 @@
+---
+
+- name: Hello! I am a WRE
+  ansible.builtin.debug:
+    msg: I am special! I make all the dataz!
+  tags:
+    - wre
+
+- name: Fun Group Fact
+  ansible.builtin.debug:
+    msg: "{{ wre_fun_group_fact }}"
+  tags:
+    - wre
+
+- name: Tell Me About Yourself
+  ansible.builtin.debug:
+    msg: "{{ tell_me_about_yourself }}"
+  tags:
+    - wre

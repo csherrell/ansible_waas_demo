@@ -1,0 +1,234 @@
+# frozen_string_literal: true
+
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+module VagrantPlugins
+  module ProviderVirtualBox
+    module Action
+      # Class for vagrant network settings
+      class Network
+        def dhcp_server_matches_config?(_dhcp_server, _config)
+          true
+        end
+      end
+    end
+  end
+end
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure('2') do |config|
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  # use an updated box with guest additions already installed, if available
+  config.vm.box = (ENV['VAGRANT_ALMALINUX_BOX'] || 'almalinux/9')
+
+  config.vm.provider "virtualbox" do |vb|
+#    vb.memory = "2048"
+    vb.memory = "512"
+  end
+
+  # Set environment variables to use differnt types
+  # of mounts
+  if ENV['VAGRANT_MOUNT_DEFAULT']
+    config.vm.synced_folder '..', '/vagrant'
+  elsif ENV['VAGRANT_MOUNT_NFS']
+    config.vm.synced_folder '..', '/vagrant', type: 'nfs', nfs_udp: false
+  else
+    config.vm.synced_folder '..', '/vagrant', type: 'virtualbox'
+  end
+
+# O&M
+
+  config.vm.define 'om.noc.nas.waas' do |subconfig|
+    subconfig.vm.hostname = 'om.noc.nas.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'om' => ['om.noc.nas.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/om.yml'
+      ansible.verbose = true
+    end
+  end
+
+  config.vm.define 'om.poc.nas.waas' do |subconfig|
+    subconfig.vm.hostname = 'om.poc.nas.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'om' => ['om.poc.nas.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/om.yml'
+      ansible.verbose = true
+    end
+  end
+
+# WRE
+
+  config.vm.define 'a.wre.bet.nas.waas' do |subconfig|
+    subconfig.vm.hostname = 'a.wre.bet.nas.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'wre' => ['a.wre.bet.nas.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/wre.yml'
+      ansible.verbose = true
+    end
+  end
+
+  config.vm.define 'b.wre.bet.nas.waas' do |subconfig|
+    subconfig.vm.hostname = 'b.wre.bet.nas.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'wre' => ['b.wre.bet.nas.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/wre.yml'
+      ansible.verbose = true
+    end
+  end
+
+  config.vm.define 'c.wre.bet.nas.waas' do |subconfig|
+    subconfig.vm.hostname = 'c.wre.bet.nas.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'wre' => ['c.wre.bet.nas.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/wre.yml'
+      ansible.verbose = true
+    end
+  end
+
+  config.vm.define 'a.wre.zsu.nas.waas' do |subconfig|
+    subconfig.vm.hostname = 'a.wre.zsu.nas.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'wre' => ['a.wre.zsu.nas.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/wre.yml'
+      ansible.verbose = true
+    end
+  end
+
+  config.vm.define 'b.wre.zsu.nas.waas' do |subconfig|
+    subconfig.vm.hostname = 'b.wre.zsu.nas.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'wre' => ['b.wre.zsu.nas.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/wre.yml'
+      ansible.verbose = true
+    end
+  end
+
+  config.vm.define 'c.wre.zsu.nas.waas' do |subconfig|
+    subconfig.vm.hostname = 'c.wre.zsu.nas.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'wre' => ['c.wre.zsu.nas.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/wre.yml'
+      ansible.verbose = true
+    end
+  end
+
+# C&V
+
+  config.vm.define 'cp1.cv.zdc.nas.waas' do |subconfig|
+    subconfig.vm.hostname = 'cp1.cv.zdc.nas.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'cv' => ['cp1.cv.zdc.nas.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/cv.yml'
+      ansible.verbose = true
+    end
+  end
+
+  config.vm.define 'cp1.cv.zla.nas.waas' do |subconfig|
+    subconfig.vm.hostname = 'cp1.cv.zla.nas.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'cv' => ['cp1.cv.zla.nas.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/cv.yml'
+      ansible.verbose = true
+    end
+  end
+
+  config.vm.define 'cp1.cv.ztl.nas.waas' do |subconfig|
+    subconfig.vm.hostname = 'cp1.cv.ztl.nas.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'cv' => ['cp1.cv.ztl.nas.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/cv.yml'
+      ansible.verbose = true
+    end
+  end
+
+# GUS
+
+  config.vm.define 'gpt.gus.cm1.nas.waas' do |subconfig|
+    subconfig.vm.hostname = 'gpt.gus.cm1.nas.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'gus' => ['gpt.gus.cm1.nas.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/gus.yml'
+      ansible.verbose = true
+    end
+  end
+
+  config.vm.define 'gpt.gus.br1.nas.waas' do |subconfig|
+    subconfig.vm.hostname = 'gpt.gus.br1.nas.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'gus' => ['gpt.gus.br1.nas.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/gus.yml'
+      ansible.verbose = true
+    end
+  end
+
+end

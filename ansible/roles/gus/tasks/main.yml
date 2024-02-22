@@ -1,0 +1,19 @@
+---
+
+- name: Hello! I am an GUS
+  ansible.builtin.debug:
+    msg: I am special! I send the dataz to the satellite!
+  tags:
+    - gus
+
+- name: Fun Group Fact
+  ansible.builtin.debug:
+    msg: "{{ gus_fun_group_fact }}"
+  tags:
+    - gus
+
+- name: Tell Me About Yourself
+  ansible.builtin.debug:
+    msg: "{{ tell_me_about_yourself }}"
+  tags:
+    - gus
