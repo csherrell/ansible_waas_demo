@@ -1,0 +1,19 @@
+---
+
+- name: Hello! I am a BE
+  ansible.builtin.debug:
+    msg: I am special! Can't make software without me!
+  tags:
+    - bg
+
+- name: Fun Group Fact
+  ansible.builtin.debug:
+    msg: "{{ bg_fun_group_fact }}"
+  tags:
+    - bg
+
+- name: Tell Me About Yourself
+  ansible.builtin.debug:
+    msg: "{{ tell_me_about_yourself }}"
+  tags:
+    - bg

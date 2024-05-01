@@ -231,4 +231,46 @@ Vagrant.configure('2') do |config|
     end
   end
 
+  config.vm.define 'tss.es1.wsf.waas' do |subconfig|
+    subconfig.vm.hostname = 'tss.es1.wsf.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'tss' => ['tss.es1.wsf.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/tss.yml'
+      ansible.verbose = true
+    end
+  end
+
+  config.vm.define 'tss.bs1.wsf.waas' do |subconfig|
+    subconfig.vm.hostname = 'tss.eb1.wsf.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'tss' => ['tss.bs1.wsf.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/tss.yml'
+      ansible.verbose = true
+    end
+  end
+
+  config.vm.define 'bg1.wsf.waas' do |subconfig|
+    subconfig.vm.hostname = 'bg1.wsf.waas'
+    subconfig.vm.provision 'ansible' do |ansible|
+      ansible.compatibility_mode = '2.0'
+      ansible.config_file = '../ansible/ansible.cfg'
+      ansible.groups = {
+        'bg' => ['bg1.wsf.waas'],
+        'development:vars' => { 'user' => 'vagrant' }
+      }
+      ansible.playbook = '../ansible/bg.yml'
+      ansible.verbose = true
+    end
+  end
+
 end

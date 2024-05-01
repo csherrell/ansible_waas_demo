@@ -1,0 +1,19 @@
+---
+
+- name: Hello! I am a TSS
+  ansible.builtin.debug:
+    msg: I am special! I make the tests work!
+  tags:
+    - tss
+
+- name: Fun Group Fact
+  ansible.builtin.debug:
+    msg: "{{ tss_fun_group_fact }}"
+  tags:
+    - tss
+
+- name: Tell Me About Yourself
+  ansible.builtin.debug:
+    msg: "{{ tell_me_about_yourself }}"
+  tags:
+    - tss

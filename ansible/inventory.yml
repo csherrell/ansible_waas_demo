@@ -149,6 +149,9 @@ all:
         cp2.cv.ztl.nas.waas:
         sp1.cv.ztl.nas.waas:
         sp2.cv.ztl.nas.waas:
+        tss.es1.wsf.waas:
+        tss.bs1.wsf.waas:
+        bg1.wsf.waas:
     wrs:
       hosts:
         a.wre.bet.nas.waas:

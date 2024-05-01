@@ -2,71 +2,89 @@
 
 all:
   hosts:
+    # Convert Vagrant inventory file to yaml
+    # Input File .vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory
+    # vi macro magic happened here
     om.noc.nas.waas:
       ansible_host: 127.0.0.1
-      ansible_port: 2222
+      ansible_port: 2217
       ansible_user: 'vagrant'
-      ansible_ssh_private_key_file: '/Users/csherrell/git/git.faa.gov/ansible_waas_demo/waas/.vagrant/machines/om.noc.nas.waas/virtualbox/private_key'
-    om.poc.nas.waas: 
-      ansible_host: 127.0.0.1 
-      ansible_port: 2204 
-      ansible_user: 'vagrant' 
-      ansible_ssh_private_key_file: '/Users/csherrell/git/git.faa.gov/ansible_waas_demo/waas/.vagrant/machines/om.poc.nas.waas/virtualbox/private_key'
-    a.wre.bet.nas.waas: 
-      ansible_host: 127.0.0.1 
-      ansible_port: 2201 
-      ansible_user: 'vagrant' 
-      ansible_ssh_private_key_file: '/Users/csherrell/git/git.faa.gov/ansible_waas_demo/waas/.vagrant/machines/a.wre.bet.nas.waas/virtualbox/private_key'
-    b.wre.bet.nas.waas: 
-      ansible_host: 127.0.0.1 
-      ansible_port: 2205 
-      ansible_user: 'vagrant' 
-      ansible_ssh_private_key_file: '/Users/csherrell/git/git.faa.gov/ansible_waas_demo/waas/.vagrant/machines/b.wre.bet.nas.waas/virtualbox/private_key'
-    c.wre.bet.nas.waas: 
-      ansible_host: 127.0.0.1 
-      ansible_port: 2206 
-      ansible_user: 'vagrant' 
-      ansible_ssh_private_key_file: '/Users/csherrell/git/git.faa.gov/ansible_waas_demo/waas/.vagrant/machines/c.wre.bet.nas.waas/virtualbox/private_key'
-    a.wre.zsu.nas.waas: 
-      ansible_host: 127.0.0.1 
-      ansible_port: 2207 
-      ansible_user: 'vagrant' 
-      ansible_ssh_private_key_file: '/Users/csherrell/git/git.faa.gov/ansible_waas_demo/waas/.vagrant/machines/a.wre.zsu.nas.waas/virtualbox/private_key'
-    b.wre.zsu.nas.waas: 
-      ansible_host: 127.0.0.1 
-      ansible_port: 2208 
-      ansible_user: 'vagrant' 
-      ansible_ssh_private_key_file: '/Users/csherrell/git/git.faa.gov/ansible_waas_demo/waas/.vagrant/machines/b.wre.zsu.nas.waas/virtualbox/private_key'
-    c.wre.zsu.nas.waas: 
-      ansible_host: 127.0.0.1 
-      ansible_port: 2209 
-      ansible_user: 'vagrant' 
-      ansible_ssh_private_key_file: '/Users/csherrell/git/git.faa.gov/ansible_waas_demo/waas/.vagrant/machines/c.wre.zsu.nas.waas/virtualbox/private_key'
-    cp1.cv.zla.nas.waas: 
-      ansible_host: 127.0.0.1 
-      ansible_port: 2210 
-      ansible_user: 'vagrant' 
-      ansible_ssh_private_key_file: '/Users/csherrell/git/git.faa.gov/ansible_waas_demo/waas/.vagrant/machines/cp1.cv.zla.nas.waas/virtualbox/private_key'
-    cp1.cv.ztl.nas.waas: 
-      ansible_host: 127.0.0.1 
-      ansible_port: 2211 
-      ansible_user: 'vagrant' 
-      ansible_ssh_private_key_file: '/Users/csherrell/git/git.faa.gov/ansible_waas_demo/waas/.vagrant/machines/cp1.cv.ztl.nas.waas/virtualbox/private_key'
-    cp1.cv.zdc.nas.waas: 
-      ansible_host: 127.0.0.1 
-      ansible_port: 2203 
-      ansible_user: 'vagrant' 
-      ansible_ssh_private_key_file: '/Users/csherrell/git/git.faa.gov/ansible_waas_demo/waas/.vagrant/machines/cp1.cv.zdc.nas.waas/virtualbox/private_key'
-    gpt.gus.br1.nas.waas: 
-      ansible_host: 127.0.0.1 
-      ansible_port: 2212 
-      ansible_user: 'vagrant' 
-      ansible_ssh_private_key_file: '/Users/csherrell/git/git.faa.gov/ansible_waas_demo/waas/.vagrant/machines/gpt.gus.br1.nas.waas/virtualbox/private_key'
-    gpt.gus.cm1.nas.waas: 
-      ansible_host: 127.0.0.1 
-      ansible_port: 2202 
-      ansible_user: 'vagrant' 
-      ansible_ssh_private_key_file: '/Users/csherrell/git/git.faa.gov/ansible_waas_demo/waas/.vagrant/machines/gpt.gus.cm1.nas.waas/virtualbox/private_key'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/om.noc.nas.waas/virtualbox/private_key'
+    om.poc.nas.waas:
+      ansible_host: 127.0.0.1
+      ansible_port: 2218
+      ansible_user: 'vagrant'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/om.poc.nas.waas/virtualbox/private_key'
+    a.wre.bet.nas.waas:
+      ansible_host: 127.0.0.1
+      ansible_port: 2219
+      ansible_user: 'vagrant'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/a.wre.bet.nas.waas/virtualbox/private_key'
+    b.wre.bet.nas.waas:
+      ansible_host: 127.0.0.1
+      ansible_port: 2220
+      ansible_user: 'vagrant'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/b.wre.bet.nas.waas/virtualbox/private_key'
+    c.wre.bet.nas.waas:
+      ansible_host: 127.0.0.1
+      ansible_port: 2221
+      ansible_user: 'vagrant'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/c.wre.bet.nas.waas/virtualbox/private_key'
+    a.wre.zsu.nas.waas:
+      ansible_host: 127.0.0.1
+      ansible_port: 2223
+      ansible_user: 'vagrant'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/a.wre.zsu.nas.waas/virtualbox/private_key'
+    b.wre.zsu.nas.waas:
+      ansible_host: 127.0.0.1
+      ansible_port: 2224
+      ansible_user: 'vagrant'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/b.wre.zsu.nas.waas/virtualbox/private_key'
+    c.wre.zsu.nas.waas:
+      ansible_host: 127.0.0.1
+      ansible_port: 2225
+      ansible_user: 'vagrant'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/c.wre.zsu.nas.waas/virtualbox/private_key'
+    cp1.cv.zdc.nas.waas:
+      ansible_host: 127.0.0.1
+      ansible_port: 2226
+      ansible_user: 'vagrant'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/cp1.cv.zdc.nas.waas/virtualbox/private_key'
+    cp1.cv.zla.nas.waas:
+      ansible_host: 127.0.0.1
+      ansible_port: 2227
+      ansible_user: 'vagrant'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/cp1.cv.zla.nas.waas/virtualbox/private_key'
+    cp1.cv.ztl.nas.waas:
+      ansible_host: 127.0.0.1
+      ansible_port: 2228
+      ansible_user: 'vagrant'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/cp1.cv.ztl.nas.waas/virtualbox/private_key'
+    gpt.gus.cm1.nas.waas:
+       ansible_host: 127.0.0.1
+       ansible_port: 2229
+       ansible_user: 'vagrant'
+       ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/gpt.gus.cm1.nas.waas/virtualbox/private_key'
+    gpt.gus.br1.nas.waas:
+      ansible_host: 127.0.0.1
+      ansible_port: 2230
+      ansible_user: 'vagrant'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/gpt.gus.br1.nas.waas/virtualbox/private_key'
+    tss.es1.wsf.waas:
+      ansible_host: 127.0.0.1
+      ansible_port: 2231
+      ansible_user: 'vagrant'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/tss.es1.wsf.waas/virtualbox/private_key'
+    tss.bs1.wsf.waas:
+      ansible_host: 127.0.0.1
+      ansible_port: 2232
+      ansible_user: 'vagrant'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/tss.bs1.wsf.waas/virtualbox/private_key'
+    bg1.wsf.waas:
+      ansible_host: 127.0.0.1
+      ansible_port: 2233
+      ansible_user: 'vagrant'
+      ansible_ssh_private_key_file: '/user/home/csherrell/git/faa/ansible_waas_demo/waas/.vagrant/machines/bg1.wsf.waas/virtualbox/private_key'
   children:
     waas:
     wre:
@@ -120,3 +138,10 @@ all:
       hosts:
         om.noc.nas.waas:
         om.poc.nas.waas:
+    tss:
+      hosts:
+        tss.es1.wsf.waas:
+        tss.bs1.wsf.waas:
+    bg:
+      hosts:
+        bg1.wsf.waas:
